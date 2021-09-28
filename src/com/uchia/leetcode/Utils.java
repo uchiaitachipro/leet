@@ -78,4 +78,17 @@ public class Utils {
         }
         return head;
     }
+
+    public static ListNode generateLisNode(int[] list) {
+        ListNode dummy = new ListNode(-1);
+        ListNode tail = dummy;
+
+        for (int i = 0; i < list.length; i++) {
+            ListNode node = new ListNode(list[i]);
+            tail.next = node;
+            tail = node;
+        }
+
+        return dummy.next;
+    }
 }
